@@ -1,28 +1,19 @@
 @use 'color';
 @use 'mixins';
 @use 'hero';
-
-@font-face {
-    font-family: Avenir;
-    src: url(../../assets/fonts/Avenir-Regular.woff2);
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: Avenir;
-    src: url(../../assets/fonts/Avenir-Bold.woff2);
-    font-weight: 700;
-}
+@use 'shows';
+@use 'fonts';
+@use 'plans';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Avenir, sans-serif;
 }
 
 body {
     background-color: color.$corDeFundo;
-    font-family: Avenir, sans-serif;
 }
 
 .text--big {
@@ -53,4 +44,19 @@ body {
     @include mixins.text(18px);
     color: color.$corTextoSecundaria;
     text-decoration: underline;
+}
+
+.button--purple {
+        display: block;
+        width: 100%;
+        height: 60px;
+        margin-top: 2vw;
+        margin-bottom: 8px;
+        font-size: 18px;
+        color: color.$corTextoSecundaria;
+        background-color: #6421ff;
+        border: none;
+        text-transform: uppercase;
+        border-radius: 4px;
+        cursor: pointer;
 }
