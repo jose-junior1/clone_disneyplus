@@ -1,0 +1,24 @@
+@use 'color';
+
+.watch-anywhere {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5.6vw;
+    align-items: center;
+
+    &__text__container {
+        padding: 0 2vw;
+    }
+
+    h2 {
+        padding-bottom: 24px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    p {
+        color: color.$corTextoPrincipal;
+    }
+}
