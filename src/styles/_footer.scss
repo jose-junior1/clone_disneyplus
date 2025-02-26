@@ -1,0 +1,94 @@
+@use 'color';
+
+.footer {
+    padding-top: 126px;
+    background-color: color.$backgroundSection;
+
+    &__container {
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0 8px;
+
+        &__companies {
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                padding-top: 36px;
+
+                li {
+                    list-style: none;
+                    color: color.$corTextoSecundaria;
+                    margin: 0 auto;
+
+                    a {
+                        text-decoration: none;
+                        color: color.$corTextoSecundaria;
+                    }
+                }
+        }
+    }
+
+    &__logo {
+        width: 80px;
+        margin: 0 auto 10px;
+        padding-top: 26px;
+    }
+
+    &__links {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        margin: 0 auto;
+
+        &__item {
+            text-align: left;
+
+            li {
+                list-style: none;
+                line-height: 45px;
+                
+                a {
+                    text-decoration: none;
+                    color: color.$corTextoSecundaria;
+
+                    &:hover {
+                        color: color.$corTextoPrincipal;
+                    }
+                }
+            }
+        }
+
+        .title--links {
+            color: color.$corTextoSecundaria;
+        }
+    }
+}
+
+.language-selector {
+    text-align: left;
+    padding-bottom: 26px;
+    display: flex;
+    align-items: center;
+
+    img {
+        height: 18px;
+        width: 18px;
+    }
+
+    select {
+        background-color: transparent;
+        color: color.$corTextoPrincipal;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            color: color.$corTextoSecundaria;
+        }
+
+        option {
+            color: color.$corDeFundo;
+        }
+    }
+}

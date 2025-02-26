@@ -4,7 +4,9 @@
 @use 'shows';
 @use 'fonts';
 @use 'plans';
-@use 'watch-anywhere';
+@use 'available-devices';
+@use 'faq';
+@use 'footer';
 
 * {
     margin: 0;
@@ -60,4 +62,47 @@ body {
         text-transform: uppercase;
         border-radius: 4px;
         cursor: pointer;
+}
+
+.image-text-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 5.6vw;
+
+    &__text__container {
+        padding: 0 2vw;
+    }
+
+    h2 {
+        padding-bottom: 24px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    p {
+        color: color.$corTextoPrincipal;
+    }
+
+    &--image-full-width {
+        display: block;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        &__text__container {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 100%;
+            width: calc(50% - 5.6vw);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
 }
