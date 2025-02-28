@@ -10,7 +10,29 @@
     }
 
     &__questions {
+        @media (max-width: 768px) {
+            section {
+                padding: 10vw 5vw;
+                text-align: center;
+            }
 
+            .faq__questions__item__question, .faq__questions__item__answer{
+                font-size: 16px;
+            }
+
+            ul {
+                padding-left: 40px;
+            }
+
+            ul:first-child {
+                li {
+                    list-style: disc;
+                    line-height: 30px;
+                }
+            }
+
+            
+        }
         &__item {
             background-color: #13151d;
             margin-bottom: 16px;
@@ -33,6 +55,10 @@
                     display: flex;
                     align-items: center;
                     font-size: 40px;
+
+                    @media (max-width:768px) {
+                        font-size: 36px;
+                    }
                 }
             }
 
